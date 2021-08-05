@@ -1,0 +1,31 @@
+<h1 id="title">Bookmark Keeper</h1>
+
+<body>
+
+<div id="bookmarks-list"> <% bookmarks.map((bookmark, index) => { %>
+  <div id="bookmark-<%= index %>">
+    name: <%= bookmark.name %>
+    url: <%= bookmark.url %>
+    description: <%= bookmark.description %>
+   </div>
+   <form action="/bookmark/<%= bookmark.id %>?_method=DELETE" method="post">
+     <input id="bookmark-<%= index %>-delete" type="submit" value="delete">
+   </form>
+   <form action="/update/<%= bookmark.id %>?_method=GET" method="get">
+    <input id="bookmark-<%= index %>-edit" type="submit" value="edit">
+  </form>
+   <br>
+    <% }) %>
+</div>
+
+
+<form action="/bookmark" method="post">
+
+  <input id="name" type="text" placeholder="Enter name" name="name"></input>
+  <input id="url" type="text" placeholder="Enter url" name="url"></input>
+  <input id="desc" type="text" placeholder="Enter description" name="desc"></input>
+  <input id="submit-button" type="submit" value="Add"></input>
+
+  </form>
+
+  </body>
