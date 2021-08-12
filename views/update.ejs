@@ -1,10 +1,8 @@
-<h1>Update Bookmark</h1>
+<link rel="stylesheet" href="styles.css">
 
-<form action="/update/<%=id%>?_method=PUT" method="post">
+<h1>Edit your URL</h1>
 
-    <input id="name" type="text" placeholder="Enter name" name="name"></input>
-    <input id="url" type="text" placeholder="Enter url" name="url"></input>
-    <input id="desc" type="text" placeholder="Enter description" name="desc"></input>
-    <input id="submit-button" type="submit" value="Update"></input>
-  
-    </form>
+<form action="/edit/<%=id%>?_method=PUT" method="post">
+    <input id="url" type="text" name="url" >
+    <input id="addButton" type="submit" value="Update">
+</form>

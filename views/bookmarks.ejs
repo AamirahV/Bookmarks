@@ -1,0 +1,23 @@
+<p> <% url.map(url => { %>
+    <h1>Add a comment to: <%= url.url %> </h1>
+    <p>
+    <% comments.map(comment => { %>
+    <% if(comment.bookmarkId === url.id) { %>
+         <%= comment.comment %> <br>        
+    <form action="/edit-comment/<%=comment.id%>" method="POST">
+        <input id="comment-button" type="submit" value="Edit Comment">
+        <input type="hidden" name="bookmarkId" value="<%= id %>">
+    </form>
+    <form action="/comments/<%=comment.id%>?_method=DELETE" method="POST">
+        <input id="comment-button" type="submit" value="Delete Comment">
+        <input type="hidden" name="bookmarkId" value="<%= id %>">
+    </form>
+    <% }}) %>
+    </p>
+    <form action="/comments/<%=id%>" method="post">
+        <input id="comment" type="text" name="comments" >
+        <input id="comment-button" type="submit" value="Add Comment">
+    </form>
+    <% }) %>
+    </p>
+    

@@ -1,15 +1,23 @@
 {
-  "name": "bookmark",
+  "name": "bookmarks",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AamirahV/Bookmarks.git"
+  },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AamirahV/Bookmarks/issues"
+  },
+  "homepage": "https://github.com/AamirahV/Bookmarks#readme",
   "dependencies": {
-    "cypress": "^8.1.0",
+    "cypress": "^8.2.0",
     "dotenv": "^10.0.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
@@ -17,14 +25,6 @@
     "nodemon": "^2.0.12",
     "pg": "^8.7.1",
     "pg-hstore": "^2.3.4",
-    "sequelize": "^6.6.5"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Neokrieger/Bookmark.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Neokrieger/Bookmark/issues"
-  },
-  "homepage": "https://github.com/Neokrieger/Bookmark#readme"
+    "sequelizer": "^1.1.4"
+  }
 }
